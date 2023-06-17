@@ -10,6 +10,10 @@ app.use(express.json());
 
 app.use(cors());
 
+app.get("/",(req,res)=>{
+    res.status(200).send("Quiz App Backend");
+})
+
 app.use("/user",userRouter);
 
 app.listen(8080,async()=>{
